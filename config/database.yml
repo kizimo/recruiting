@@ -6,19 +6,19 @@ common: &common
   
 development:
   <<: *common
-  database: recuriting_app_developement
+  database: recruiting_app_developement
   #database: groundfloor_restore
   port: 5432
   host: localhost
 
 test:
   <<: *common
-  database: recuriting_app_test
+  database: recruiting_app_test
   port: 5432
   host: localhost
 
 production:
   <<: *common
-  database: recuriting_app_production
+  database: recruiting_app_production
   port: 5432
   host: localhost
