@@ -14,7 +14,6 @@ class DealsController < InheritedResources::Base
         redirect_to deals_path
       }
       failure.html { 
-        fixup_paperclip_errors
         flash.now[:error] = "Your project was not created. Please address the errors listed below and try again: <br><span>#{@deal.errors.full_messages.join('<br>')}</span>"
         render :new
       }
@@ -34,7 +33,6 @@ class DealsController < InheritedResources::Base
       flash[:success] = "Your proposal was updated."
       redirect_to deals_path
     else
-      fixup_paperclip_errors
       flash.now[:error] = "Your project was not updated. Please address the errors listed below and try again: <br><span>#{@deal.errors.full_messages.join('<br>')}</span>"
       render :edit
     end
