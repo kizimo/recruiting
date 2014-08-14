@@ -17,10 +17,11 @@
       .col-xs-12.col-sm-12.col-md-12.col-lg-12
         %ul.links
           %li
-            %a{onclick: "gotoAnchor('#why');"}="Why sign up?"
+            %a{href: "#why"}="Why sign up?"
           %li
-            %a{onclick: "gotoAnchor('#why');"}="How it works?"
-
+            %a{href: "#how"}="How it works?"
+            
+%a#why{name: "why"}
 %section.container-wrapper.why
   .container
     %h1="WHY SIGN UP?"
@@ -48,8 +49,10 @@
         %label.small
           Already a member? 
           = link_to("Login", new_user_session_path)
-
+          
+%a#how{name: "how"}
 %section.container-wrapper.odd.how
+%br
   .container
     .row
       .col-xs-12.col-sm-12.col-md-12.col-lg-7
