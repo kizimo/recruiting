@@ -1,0 +1,54 @@
+<% set_header_tab("profile") %>
+
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1>Your Profile</h1>
+  <% @developer_profile.each do |developer_profile| %>
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-user"></i></button> <strong>User:</strong>
+      <%= developer_profile.user_id %> (<%= developer_profile.id %>)
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-briefcase"></i></button> <strong>Employment:</strong>
+      <%= developer_profile.employment %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-gears"></i></button> <strong>Experience:</strong>
+      <%= developer_profile.experience %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-calendar"></i></button> <strong>Yearly projects:</strong>
+      <%= developer_profile.yearly_projects %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-folder"></i></button> <strong>Typical project size:</strong>
+      <%= developer_profile.typical_project_size %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-bullhorn"></i></button> <strong>How did you hear:</strong>
+      <%= developer_profile.how_did_you_hear %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-comments"></i></button> <strong>How response:</strong>
+      <%= developer_profile.how_response %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-question"></i></button> <strong>Why:</strong>
+      <%= developer_profile.why %>
+    </p>
+    
+    <p>
+      <button disabled="true" class="btn btn-link"><i class="fa fa-location-arrow"></i></button> <strong>State:</strong>
+      <%= developer_profile.state %>
+    </p>
+    
+      <p><%= link_to 'Edit', edit_developer_profile_path(developer_profile), class: "btn btn-primary" %></p>
+  <% end %>
+</div>

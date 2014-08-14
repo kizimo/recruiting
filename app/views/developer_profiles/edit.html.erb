@@ -1,6 +1,9 @@
-<h1>Editing developer_profile</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @developer_profile %> |
-<%= link_to 'Back', developer_profiles_path %>
+<div class="container">
+  <h1>Edit Your Profile</h1>
+  
+  <%= render 'form' %>
+  <br>
+  <%= link_to 'Show', @developer_profile, class: "btn btn-primary" %> 
+  <%= link_to 'Back', profile_path, class: "btn btn-primary" %>
+</div>
+<br><br>

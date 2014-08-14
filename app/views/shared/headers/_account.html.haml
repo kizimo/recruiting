@@ -18,5 +18,7 @@
           = link_to("Investments", investments_path)
         %li{class: ((content_for :header_tab) == "deals" ? "active" : "")}
           = link_to("Projects", deals_path)
+        %li{class: ((content_for :header_tab) == "profile" ? "active" : "")}
+          = link_to("Profile", profile_path)
         %li{class: ((content_for :header_tab) == "account" ? "active" : "")}
           = link_to("Logout", destroy_user_session_path, :method => :delete)

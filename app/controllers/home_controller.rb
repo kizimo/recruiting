@@ -11,4 +11,5 @@ class HomeController < ApplicationController
 
   def developers
   end
+
 end

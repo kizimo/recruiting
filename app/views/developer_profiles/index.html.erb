@@ -1,43 +1,46 @@
-<h1>Listing developer_profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Employment</th>
-      <th>Experience</th>
-      <th>Yearly projects</th>
-      <th>Typical project size</th>
-      <th>How did you hear</th>
-      <th>How response</th>
-      <th>Why</th>
-      <th>State</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @developer_profiles.each do |developer_profile| %>
+<div class="container">
+  <h1>Listing All Profiles</h1>
+  
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= developer_profile.user_id %></td>
-        <td><%= developer_profile.employment %></td>
-        <td><%= developer_profile.experience %></td>
-        <td><%= developer_profile.yearly_projects %></td>
-        <td><%= developer_profile.typical_project_size %></td>
-        <td><%= developer_profile.how_did_you_hear %></td>
-        <td><%= developer_profile.how_response %></td>
-        <td><%= developer_profile.why %></td>
-        <td><%= developer_profile.state %></td>
-        <td><%= link_to 'Show', developer_profile %></td>
-        <td><%= link_to 'Edit', edit_developer_profile_path(developer_profile) %></td>
-        <td><%= link_to 'Destroy', developer_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>User</th>
+        <th>Employment</th>
+        <th>Experience</th>
+        <th>Yearly projects</th>
+        <th>Typical project size</th>
+        <th>How did you hear</th>
+        <th>How response</th>
+        <th>Why</th>
+        <th>State</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Developer profile', new_developer_profile_path %>
+    </thead>
+  
+    <tbody>
+      <% @developer_profiles.each do |developer_profile| %>
+        <tr>
+          <td><%= developer_profile.user_id %> (<%= developer_profile.id %>)</td>
+          <td><%= developer_profile.employment %></td>
+          <td><%= developer_profile.experience %></td>
+          <td><%= developer_profile.yearly_projects %></td>
+          <td><%= developer_profile.typical_project_size %></td>
+          <td><%= developer_profile.how_did_you_hear %></td>
+          <td><%= developer_profile.how_response %></td>
+          <td><%= developer_profile.why %></td>
+          <td><%= developer_profile.state %></td>
+          <td><%= link_to 'Show', developer_profile, class: "btn btn-warning" %></td>
+          <td><%= link_to 'Edit', edit_developer_profile_path(developer_profile), class: "btn btn-primary"  %></td>
+          <td><%= link_to 'Destroy', developer_profile, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Developer profile', new_developer_profile_path, class: "btn btn-success" %>
+</div>
+<br><br>
