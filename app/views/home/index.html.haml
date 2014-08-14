@@ -29,7 +29,7 @@
                 %label.icon
                   %span="1"
             %td
-              Make sure to setup the database and load the seed data to get you started on the right foot.
+              %del="Make sure to setup the database and load the seed data to get you started on the right foot."
               %div{class: "#{"hide" if User.count > 0}"}
                 %code
                   rake db:seed
@@ -39,7 +39,7 @@
               %label.icon
                 %span="2"
             %td
-              Review the application, code and information on this page.  Check out the gem file to see what tools have been added to help you out.  When you are ready make a commit to show you are starting. 
+              %del="Review the application, code and information on this page.  Check out the gem file to see what tools have been added to help you out.  When you are ready make a commit to show you are starting." 
 
           %tr
             %td
@@ -48,7 +48,8 @@
             %td
               Locate and fix the bugs listed below.  Also fix any new ones encountered along the way:  
               %ul
-                %li="The Investments page should only show \"published\" deals.  Right now it is showing all deals, so please make sure it only shows published deals."
+                %li
+                  %del="The Investments page should only show \"published\" deals.  Right now it is showing all deals, so please make sure it only shows published deals."
                 %li="The \"Developers\" tab in the header does not reflect the selected state.  When you click on the page, the header item should turn green and have an underline."
                 %li="The \"Why sign up?\" and the \"How it works?\" links on the developers page don't scroll to the correct section on the page.  When you click the link the page is supposed to scroll down to the right element."
                 %li
